@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <title>Beste Lokale in Berlin</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+
+
+</head>
+<body>
+<h1>Restaurants in Berlin</h1>
+
+<div id="root">
+    <!-- Bestehende Bezirke -->
+    <section>
+        <h2>Charlottenburg-Wilmersdorf</h2>
+        <ul>
+            <li>Restaurant A</li>
+            <li>Restaurant B</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Friedrichshain-Kreuzberg</h2>
+        <ul>
+            <li>Restaurant C</li>
+            <li>Restaurant D</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Lichtenberg</h2>
+        <ul>
+            <li>Restaurant E</li>
+            <li>Restaurant F</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Marzahn-Hellersdorf</h2>
+        <ul>
+            <li>Restaurant G</li>
+            <li>Restaurant H</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Mitte</h2>
+        <ul>
+            <li>Restaurant I</li>
+            <li>Restaurant J</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Neukölln</h2>
+        <ul>
+            <li>Restaurant K</li>
+            <li>Restaurant L</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Pankow</h2>
+        <ul>
+            <li>Restaurant M</li>
+            <li>Restaurant N</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Reinickendorf</h2>
+        <ul>
+            <li>Restaurant O</li>
+            <li>Restaurant P</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Spandau</h2>
+        <ul>
+            <li>Restaurant Q</li>
+            <li>Restaurant R</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Steglitz-Zehlendorf</h2>
+        <ul>
+            <li>Restaurant S</li>
+            <li>Restaurant T</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Tempelhof-Schöneberg</h2>
+        <ul>
+            <li>Restaurant U</li>
+            <li>Restaurant V</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Treptow-Köpenick</h2>
+        <ul>
+            <li>Restaurant W</li>
+            <li>Restaurant X</li>
+        </ul>
+    </section>
+</div>
+
+<!-- Formular für neues Restaurant hinzufügen -->
+<div id="new-restaurant-form">
+    <h2>Neues Restaurant hinzufügen</h2>
+    <form id="restaurantForm">
+        <label for="districtSelect">Bezirk auswählen:</label>
+        <select id="districtSelect" name="districtSelect" required>
+            <option value="" disabled selected>Bezirk auswählen</option>
+            <option value="Charlottenburg-Wilmersdorf">Charlottenburg-Wilmersdorf</option>
+            <option value="Friedrichshain-Kreuzberg">Friedrichshain-Kreuzberg</option>
+            <option value="Lichtenberg">Lichtenberg</option>
+            <option value="Marzahn-Hellersdorf">Marzahn-Hellersdorf</option>
+            <option value="Mitte">Mitte</option>
+            <option value="Neukölln">Neukölln</option>
+            <option value="Pankow">Pankow</option>
+            <option value="Reinickendorf">Reinickendorf</option>
+            <option value="Spandau">Spandau</option>
+            <option value="Steglitz-Zehlendorf">Steglitz-Zehlendorf</option>
+            <option value="Tempelhof-Schöneberg">Tempelhof-Schöneberg</option>
+            <option value="Treptow-Köpenick">Treptow-Köpenick</option>
+        </select>
+        <br>
+        <label for="restaurantName">Restaurant Name:</label>
+        <input type="text" id="restaurantName" name="restaurantName" required>
+        <br>
+
+        <!-- Regler für die Sternebewertung -->
+        <label for="ratingSlider">Bewertung:</label>
+        <div class="slider-container">
+            <input type="range" id="ratingSlider" name="ratingSlider" min="1" max="5" step="0.5" value="3">
+            <div class="star-rating" id="starDisplay">
+                <!-- Dynamisch erzeugte Sterne -->
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+        </div>
+        <input type="hidden" id="rating" name="rating" value="3" required> <!-- Wert des Sliders als verstecktes Feld -->
+        <br>
+        <button type="submit">Restaurant hinzufügen</button>
+    </form>
+</div>
+
+
+
+<script src="js/script.js"></script>
+</body>
+</html>

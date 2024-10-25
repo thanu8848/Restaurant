@@ -1,0 +1,16 @@
+/* Slider für die Bewertung */
+.slider-container {
+    display: flex;
+    align-items: center;
+}
+
+input[type="range"] {
+    width: 200px;
+    margin-right: 20px;
+}
+
+.star-rating i {
+    font-size: 25px;
+    color: gold;
+    margin-right: 5px;
+}
